@@ -1,6 +1,7 @@
 <h1>Welcome to the FHIR Epic App!</h1>
-@if(accessToken()) {
-  <p>Your access token: {{ accessToken() }}</p>
+@if(idToken()) {
+  <p>Your ID Token: {{ idToken() }}</p>
+  <button (click)="makeTestCallToEpicApi()">Make Test Call on our API</button>
 }
 
 @if (currentPractitioner()) {
